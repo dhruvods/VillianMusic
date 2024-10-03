@@ -168,7 +168,6 @@ def telegram_markup_timer(_, chat_id, played, dur):
         [
             InlineKeyboardButton(text="ᴏᴡɴᴇʀ", user_id=config.OWNER_ID[0]),
             InlineKeyboardButton(text="Jᴏɪɴ", url=f"{config.SUPPORT_GROUP}"),
-            ),
         ],
         [
             InlineKeyboardButton(
