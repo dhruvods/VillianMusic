@@ -166,9 +166,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
             ),
         ],
         [
-            InlineKeyboardButton(
-                text="📥 ᴠɪᴅᴇᴏ", callback_data=f"downloadvideo {videoid}"
-            ),
+            InlineKeyboardButton(text="ᴏᴡɴᴇʀ", user_id=config.OWNER_ID[0]),
             InlineKeyboardButton(
                 text="📥 ᴀᴜᴅɪᴏ", callback_data=f"downloadaudio {videoid}"
             ),
