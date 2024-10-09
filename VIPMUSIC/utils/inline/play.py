@@ -630,17 +630,17 @@ def stream_markup_timer2(_, chat_id, played, dur):
     buttons = [
         [
             InlineKeyboardButton(
-                text=f"{played} •{bar}• {dur}",
+                text=_["S_B_5"],
                 url=f"https://t.me/{app.username}?startgroup=true",
-            )
+            ),
         ],
         [
             InlineKeyboardButton(
-                text="✚ ᴘʟᴀʏʟɪsᴛ", callback_data=f"vip_playlist {videoid}"
+                text="Owner", user_id=f"{config.OWNER_ID[0]}"
             ),
             InlineKeyboardButton(
-                text="ᴄᴏɴᴛʀᴏʟs ♻",
-                callback_data=f"Pages Back|3|{videoid}|{chat_id}",
+                text="Support",
+                url=f"{config.SUPPORT_GROUP}",
             ),
         ],
         [
