@@ -55,44 +55,40 @@ def stream_markup_timerr(_, videoid, chat_id, played, dur):
 
     # Fun and engaging sentences with progress bar
     if 10 < umm <= 20:
-        bar = "💞ᴄʟɪᴄᴋ ᴛᴏ ᴀᴅᴅ ɪɴ ᴄʜᴀɴɴᴇʟs💞"
+        bar = "ᴄʟɪᴄᴋ ᴛᴏ ᴀᴅᴅ ɪɴ ᴄʜᴀɴɴᴇʟs"
     elif 20 <= umm < 35:
-        bar = "🎄ᴛᴀᴘ ᴛᴏ ᴇɴᴛᴇʀ ᴍᴏʀᴇ ɢʀᴏᴜᴘs🎄"
+        bar = "ᴛᴀᴘ ᴛᴏ ᴇɴᴛᴇʀ ᴍᴏʀᴇ ɢʀᴏᴜᴘs"
     elif 35 <= umm < 50:
-        bar = "🎁ᴄʟɪᴄᴋ ᴛᴏ ᴀᴅᴅ ɪɴ ɴᴇᴡ ᴄʜᴀᴛs🎁"
+        bar = "ᴄʟɪᴄᴋ ᴛᴏ ᴀᴅᴅ ɪɴ ɴᴇᴡ ᴄʜᴀᴛs"
     elif 50 <= umm < 75:
-        bar = "⚜️ᴛᴀᴘ ʜᴇʀᴇ ғᴏʀ ᴄʜᴀᴛ ɪɴᴠɪᴛᴇs⚜️"
+        bar = "ᴛᴀᴘ ʜᴇʀᴇ ғᴏʀ ᴄʜᴀᴛ ɪɴᴠɪᴛᴇs"
     elif 75 <= umm < 80:
-        bar = "🔥ᴄʟɪᴄᴋ ᴛᴏ ᴀᴄᴄᴇss ɢʀᴏᴜᴘs🔥"
+        bar = "ᴄʟɪᴄᴋ ᴛᴏ ᴀᴄᴄᴇss ɢʀᴏᴜᴘs"
     elif 80 <= umm < 85:
-        bar = "🌟ᴛᴀᴘ ᴛᴏ ᴇxᴘʟᴏʀᴇ ᴍᴏʀᴇ ᴄʜᴀᴛ🌟"
+        bar = "ᴛᴀᴘ ᴛᴏ ᴇxᴘʟᴏʀᴇ ᴍᴏʀᴇ ᴄʜᴀᴛ"
     elif 85 <= umm < 90:
-        bar = "🐥ᴄʟɪᴄᴋ ᴛᴏ ᴀᴅᴅ ɴᴇᴡ ᴄʜᴀᴛ ʀᴏᴏᴍ🐥"
+        bar = "ᴄʟɪᴄᴋ ᴛᴏ ᴀᴅᴅ ɴᴇᴡ ᴄʜᴀᴛ ʀᴏᴏᴍ"
     elif 90 <= umm < 95:
-        bar = "❣️ᴛᴀᴘ ᴛᴏ ᴀᴅᴅ ᴅɪғғᴇʀᴇɴᴛ ɢʀᴏᴜᴘ❣️"
+        bar = "ᴛᴀᴘ ᴛᴏ ᴀᴅᴅ ᴅɪғғᴇʀᴇɴᴛ ɢʀᴏᴜᴘ"
     elif 95 <= umm < 100:
-        bar = "⚡ᴄʟɪᴄᴋ ғᴏʀ ɢᴇᴛ ᴀᴅᴅ ɪɴ ᴄʜᴀᴛs⚡"
+        bar = "ᴄʟɪᴄᴋ ғᴏʀ ɢᴇᴛ ᴀᴅᴅ ɪɴ ᴄʜᴀᴛs"
     else:
-        bar = "✨ᴛᴀᴘ ʜᴇʀᴇ ᴛᴏ ɢʀᴏᴜᴘ ɪɴᴠɪᴛᴇs✨"
+        bar = "ᴛᴀᴘ ʜᴇʀᴇ ᴛᴏ ɢʀᴏᴜᴘ ɪɴᴠɪᴛᴇs"
     buttons = [
         [
             InlineKeyboardButton(
-                text=f"{bar}",
+                text=_["S_B_5"],
                 url=f"https://t.me/{app.username}?startgroup=true",
-            )
-        ],
-        [
-            InlineKeyboardButton(
-                text="✚ ᴘʟᴀʏʟɪsᴛ", callback_data=f"vip_playlist {videoid}"
-            ),
-            InlineKeyboardButton(
-                text="ᴄᴏɴᴛʀᴏʟs ♻",
-                callback_data=f"Pages Back|3|{videoid}|{chat_id}",
             ),
         ],
         [
-            InlineKeyboardButton(text="ᴏᴡɴᴇʀ", user_id=config.OWNER_ID[0]),
-            InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=f"{config.SUPPORT_GROUP}"),
+            InlineKeyboardButton(
+                text="Owner", user_id=f"{config.OWNER_ID[0]}"
+            ),
+            InlineKeyboardButton(
+                text="Support",
+                url=f"{config.SUPPORT_GROUP}",
+            ),
         ],
         [
             InlineKeyboardButton(
@@ -148,21 +144,22 @@ def telegram_markup_timer(_, chat_id, played, dur):
         bar = "——————————◉"
     else:
         bar = "◉——————————"
-
+        
+        
     buttons = [
         [
             InlineKeyboardButton(
-                text=f"{played} •{bar}• {dur}",
+                text=_["S_B_5"],
                 url=f"https://t.me/{app.username}?startgroup=true",
-            )
+            ),
         ],
         [
             InlineKeyboardButton(
-                text="✚ ᴘʟᴀʏʟɪsᴛ", callback_data=f"vip_playlist {videoid}"
+                text="Owner", user_id=f"{config.OWNER_ID[0]}"
             ),
             InlineKeyboardButton(
-                text="ᴄᴏɴᴛʀᴏʟs ♻",
-                callback_data=f"Pages Back|3|{videoid}|{chat_id}",
+                text="Support",
+                url=f"{config.SUPPORT_GROUP}",
             ),
         ],
         [
@@ -176,11 +173,38 @@ def telegram_markup_timer(_, chat_id, played, dur):
     return buttons
 
 
+
+    
+
 def telegram_markupp(_, chat_id):
     buttons = [
         [
             InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
-            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="II", callback_dabuttons = [
+        [
+            InlineKeyboardButton(
+                text=_["S_B_5"],
+                url=f"https://t.me/{app.username}?startgroup=true",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="Owner", user_id=f"{config.OWNER_ID[0]}"
+            ),
+            InlineKeyboardButton(
+                text="Support",
+                url=f"{config.SUPPORT_GROUP}",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="๏ ᴀʟʟ ғᴇᴀᴛᴜʀᴇs ๏",
+                callback_data=f"Pages Forw|0|{videoid}|{chat_id}",
+            ),
+        ],
+    ]
+
+    return buttonsta=f"ADMIN Pause|{chat_id}"),
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
