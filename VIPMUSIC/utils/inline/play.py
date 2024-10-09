@@ -8,7 +8,7 @@
 # All rights reserved.
 #
 import math
-
+import config
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from VIPMUSIC.utils.formatters import time_to_seconds
