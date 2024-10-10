@@ -767,11 +767,11 @@ def panel_markup_5(_, videoid, chat_id):
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
         ],
-        [
-            InlineKeyboardButton(text="ᴘᴀᴜsᴇ", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton(text="sᴛᴏᴘ", callback_data=f"ADMIN Stop|{chat_id}"),
-            InlineKeyboardButton(text="sᴋɪᴘ", callback_data=f"ADMIN Skip|{chat_id}"),
-        ],
+ return [
+            InlineKeyboardButton(text=f"ADMIN Pause|{chat_id}", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
+            InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}")
+        ]
         [
             InlineKeyboardButton(
                 text="ʀᴇsᴜᴍᴇ", callback_data=f"ADMIN Resume|{chat_id}"
